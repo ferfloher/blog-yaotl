@@ -1,7 +1,4 @@
-from pathlib import Path
 
-# HTML del archivo con banner aplicado al header
-html_content = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -131,10 +128,3 @@ html_content = """
   </footer>
 </body>
 </html>
-"""
-
-# Guardar el archivo index.html
-index_path = Path("/mnt/data/index.html")
-index_path.write_text(html_content, encoding="utf-8")
-
-index_path
