@@ -1,62 +1,81 @@
+from pathlib import Path
 
+# HTML del archivo con banner aplicado al header
+html_content = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yaotl Cualli</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-color: #121212;
       --text-color: #e0e0e0;
       --accent-color: #bb86fc;
-      --link-hover: #03dac6;
     }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
       line-height: 1.6;
       padding: 20px;
     }
+
     header {
-      border-bottom: 1px solid #333;
-      margin-bottom: 20px;
+      background: url('banner.jpg') center/cover no-repeat;
+      padding: 60px 20px;
+      color: white;
+      text-shadow: 1px 1px 5px black;
+      text-align: center;
     }
+
     h1 {
-      color: var(--accent-color);
-      font-size: 2.5rem;
+      font-size: 3em;
+      margin-bottom: 10px;
     }
+
+    nav {
+      margin-top: 10px;
+    }
+
     nav a {
-      margin-right: 15px;
+      color: var(--accent-color);
+      margin: 0 15px;
       text-decoration: none;
-      color: var(--text-color);
     }
-    nav a:hover {
-      color: var(--link-hover);
-    }
+
     section {
-      margin-top: 20px;
+      margin-top: 40px;
     }
+
+    h2 {
+      border-bottom: 2px solid var(--accent-color);
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .entry-list {
+      list-style: none;
+      padding-left: 10px;
+    }
+
     .entry-list li {
       margin-bottom: 10px;
     }
+
     footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #999;
-      border-top: 1px solid #333;
-      padding-top: 10px;
-    }
-    .bio {
-      margin-top: 10px;
-      font-style: italic;
+      margin-top: 60px;
+      font-size: 0.9em;
+      text-align: center;
+      color: #888;
     }
   </style>
 </head>
@@ -70,53 +89,52 @@
       <a href="#resenas">Reseñas</a>
       <a href="#viajes">Viajes</a>
     </nav>
-    <p class="bio">Humano con rico color de piel.</p>
   </header>
 
-  <main>
-    <section id="experimentos">
-      <h2>🔬 Experimentos</h2>
-      <ul class="entry-list">
-        <li><a href="#">Cristalización de alumbre</a></li>
-        <li><a href="#">Cómo simular un eclipse con lámparas</a></li>
-      </ul>
-    </section>
+  <section id="experimentos">
+    <h2>🔬 Experimentos</h2>
+    <ul class="entry-list">
+      <li><a href="#">Cristales de alumbre</a></li>
+    </ul>
+  </section>
 
-    <section id="proyectos">
-      <h2>🛠️ Proyectos</h2>
-      <ul class="entry-list">
-        <li><a href="#">Heliodón casero con materiales reciclados</a></li>
-        <li><a href="#">Figura 3D de R2D2 para regalar</a></li>
-      </ul>
-    </section>
+  <section id="proyectos">
+    <h2>🛠️ Proyectos</h2>
+    <ul class="entry-list">
+      <li><a href="#">Heliodón casero</a></li>
+    </ul>
+  </section>
 
-    <section id="programacion">
-      <h2>💻 Programación</h2>
-      <ul class="entry-list">
-        <li><a href="#">Página web para físicos</a></li>
-        <li><a href="#">Simulación solar en Python</a></li>
-      </ul>
-    </section>
+  <section id="programacion">
+    <h2>💻 Programación</h2>
+    <ul class="entry-list">
+      <li><a href="#">Automatización con Python</a></li>
+    </ul>
+  </section>
 
-    <section id="resenas">
-      <h2>📚 Reseñas</h2>
-      <ul class="entry-list">
-        <li><a href="#">Star Wars y la ciencia detrás del mito</a></li>
-        <li><a href="#">Mafalda y la filosofía cotidiana</a></li>
-      </ul>
-    </section>
+  <section id="resenas">
+    <h2>📚 Reseñas</h2>
+    <ul class="entry-list">
+      <li><a href="#">Review: Star Wars Episodio V</a></li>
+    </ul>
+  </section>
 
-    <section id="viajes">
-      <h2>🌎 Viajes</h2>
-      <ul class="entry-list">
-        <li><a href="#">Un día en Iztapalapa bajo el solsticio</a></li>
-        <li><a href="#">Explorando museos de ciencia en CDMX</a></li>
-      </ul>
-    </section>
-  </main>
+  <section id="viajes">
+    <h2>🌄 Viajes</h2>
+    <ul class="entry-list">
+      <li><a href="#">Cerro del Peñón</a></li>
+    </ul>
+  </section>
 
   <footer>
     <p>&copy; 2025 Yaotl Cualli. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
+"""
+
+# Guardar el archivo index.html
+index_path = Path("/mnt/data/index.html")
+index_path.write_text(html_content, encoding="utf-8")
+
+index_path
