@@ -4,124 +4,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yaotl Cualli</title>
-  <style>
-    :root {
-      --bg-color: #121212;
-      --text-color: #e0e0e0;
-      --accent-color: #bb86fc;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      padding: 20px;
-    }
-
-    header {
-      background: url('banner.jpg') center/cover no-repeat;
-      padding: 60px 20px;
-      color: white;
-      text-shadow: 1px 1px 5px black;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: var(--accent-color);
-      margin: 0 15px;
-      text-decoration: none;
-    }
-
-    section {
-      margin-top: 40px;
-    }
-
-    h2 {
-      border-bottom: 2px solid var(--accent-color);
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-    }
-
-    .entry-list {
-      list-style: none;
-      padding-left: 10px;
-    }
-
-    .entry-list li {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 0.9em;
-      text-align: center;
-      color: #888;
-    }
-  </style>
+  <title>Yaotl Cualli - Portafolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Yaotl Cualli</h1>
-    <nav>
-      <a href="#experimentos">Experimentos</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#programacion">Programación</a>
-      <a href="#resenas">Reseñas</a>
-      <a href="#viajes">Viajes</a>
-    </nav>
+    <div class="header-content">
+      <h1>Yaotl Cualli</h1>
+      <p>Explorador humano con rico color de piel</p>
+      <nav>
+        <a href="#experimentos">Experimentos</a>
+        <a href="#programacion">Programación</a>
+        <a href="#reseñas">Reseñas</a>
+        <a href="#viajes">Viajes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="experimentos">
-    <h2>🔬 Experimentos</h2>
-    <ul class="entry-list">
-      <li><a href="#">Cristales de alumbre</a></li>
-    </ul>
-  </section>
+  <main>
+    <section id="experimentos">
+      <h2>🔬 Experimentos</h2>
+      <p>Próximamente artículos sobre ciencia y curiosidades...</p>
+    </section>
 
-  <section id="proyectos">
-    <h2>🛠️ Proyectos</h2>
-    <ul class="entry-list">
-      <li><a href="#">Heliodón casero</a></li>
-    </ul>
-  </section>
+    <section id="programacion">
+      <h2>💻 Programación</h2>
+      <p>Proyectos, tutoriales y código útil.</p>
+    </section>
 
-  <section id="programacion">
-    <h2>💻 Programación</h2>
-    <ul class="entry-list">
-      <li><a href="#">Automatización con Python</a></li>
-    </ul>
-  </section>
+    <section id="reseñas">
+      <h2>📚 Reseñas</h2>
+      <p>Opiniones sobre libros, series, películas y más.</p>
+    </section>
 
-  <section id="resenas">
-    <h2>📚 Reseñas</h2>
-    <ul class="entry-list">
-      <li><a href="#">Review: Star Wars Episodio V</a></li>
-    </ul>
-  </section>
+    <section id="viajes">
+      <h2>🌍 Viajes</h2>
+      <p>Relatos, fotos y aprendizajes de distintos lugares.</p>
+    </section>
 
-  <section id="viajes">
-    <h2>🌄 Viajes</h2>
-    <ul class="entry-list">
-      <li><a href="#">Cerro del Peñón</a></li>
-    </ul>
-  </section>
+    <section id="contacto">
+      <h2>📬 Contacto</h2>
+      <p>Puedes escribirme a: <a href="mailto:ferfloher@gmail.com">ferfloher@gmail.com</a></p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Yaotl Cualli. Todos los derechos reservados.</p>
