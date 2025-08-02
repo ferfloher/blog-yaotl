@@ -83,7 +83,7 @@ body {
 .patron-medio,
 .patron-inferior {
   height: 25px;
-  background-image: url('patron.png'); /* imagen de patrón mexica */
+  background-image: url('patron.jpeg'); /* imagen de patrón mexica */
   background-repeat: repeat-x;
   background-size: contain;
 }
